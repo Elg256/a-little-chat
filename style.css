@@ -53,7 +53,10 @@ button[type=submit] {
     position: fixed;
     top: 1em;
     right: 1em;
+	
 }
+
+
 
 /* Styles spécifiques aux écrans de taille maximale de 600 pixels (téléphones) */
 @media only screen and (max-width: 600px) {
@@ -66,6 +69,7 @@ button[type=submit] {
     body {
         background: lightgray;
         color: #000; /* Changer la couleur du texte pour les petits écrans */
+
     }
 }
 
@@ -87,4 +91,73 @@ button[type=submit] {
     font-weight: bold;
     font-family: 'Sixtyfour', sans-serif;
     font-size: .5em;
+}
+
+.sent-message img {
+    width: 100%;
+    max-height: 50vh;
+}
+
+
+/* Cachez la case à cocher */
+#menu-checkbox {
+    display: none;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+
+/* Stylez le label comme un bouton */
+.menu-label {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+
+    position: fixed;
+    top: 1em; /* Ajustez la position du bouton selon vos besoins */
+    right: 1em; /* Ajustez la position du bouton selon vos besoins */
+
+}
+
+.dropdown {
+    position: fixed;
+    top: 1em;
+    right: 15em;
+    display: inline-block;
+}
+
+#pseudoInput {
+    position: fixed;
+    top: 0;
+    margin: 1em;
+    left: 1em;
+    display: inline-block;
+    max-width: 50vh;
+    width: 10em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Affichez le menu lorsqu'une case à cocher est cochée */
+#menu-checkbox:checked + .menu-label + .dropdown .dropdown-content {
+    display: block;
 }
