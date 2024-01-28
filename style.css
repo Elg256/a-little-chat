@@ -1,19 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&family=Ubuntu+Mono&display=swap');
+
 body {
     text-align: center; /* Centrer horizontalement le contenu du body */
     background: url(image.png);
     background-attachment: fixed;
     background-size: cover;
     margin:0;
-}
-
-/* Styles spécifiques aux écrans de taille maximale de 600 pixels (téléphones) */
-@media only screen and (max-width: 600px) {
-    body {
-        background: lightgray;
-        color: #000; /* Changer la couleur du texte pour les petits écrans */
-    }
-
-    /* Ajoutez d'autres styles spécifiques aux téléphones ici */
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 /* Styles par défaut pour tous les appareils */
@@ -21,17 +14,8 @@ body {
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 15%, rgba(255,255,255,0) 100%);
     padding: 0 1em;
+    width: 24em;
 }
-
-
-
-
-a {
-    position:absolute;
-    bottom:0;
-
-}
-
 
 .container {
     display: inline-block; /* Permet d'aligner à gauche tout en étant centré horizontalement */
@@ -42,16 +26,8 @@ a {
     line-height: 1.5;
 }
 
-.sent-message {
-    margin: 0em 0;
-}
-
 .spacer {
     margin: 0.0em 0;
-}
-
-p {
-    margin-top: 0;
 }
 
 form {
@@ -64,6 +40,7 @@ input[type=text] {
     width: 70%;
     margin: 2em auto auto;
     height: 2.5em;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 button[type=submit] {
@@ -86,9 +63,10 @@ button[type=submit] {
         padding: 0.5em; /* Changer la valeur du padding pour les petits écrans */
     }
 
-    /* Ajoutez d'autres styles spécifiques aux téléphones ici */
-	
-
+    body {
+        background: lightgray;
+        color: #000; /* Changer la couleur du texte pour les petits écrans */
+    }
 }
 
 .sent-message {
@@ -97,8 +75,16 @@ button[type=submit] {
     padding: 0.5em;
     width: fit-content;
     border-radius: 10px;
+    word-break: break-all; /* Add this line to cut long words */
 }
 
 .sent-message p {
     width: fit-content;
+    margin: 0 0 1em 0;
+}
+
+.sent-message .date {
+    font-weight: bold;
+    font-family: 'Sixtyfour', sans-serif;
+    font-size: .5em;
 }
